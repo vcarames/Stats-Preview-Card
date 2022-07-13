@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 15px;
+  font-family: "Lexend Deca";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(233, 47%, 7%);
+}
+
+.main-container {
+  width: 1100px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  margin-top: 50px;
+  overflow: hidden;
+  background-color: hsl(244, 38%, 16%);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px;
+}
+
+.img-container {
+  background-image: url("images/image-header-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  filter: brightness(75%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(277, 96%, 52%, 0.431);
+}
+
+.header {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Inter;
+  color: hsl(0, 0%, 100%);
+}
+
+.accent {
+  color: hsl(277, 64%, 61%);
+}
+
+.info-container {
+  width: 400px;
+}
+
+.info {
+  margin-top: 10px;
+  line-height: 25px;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.561);
+}
+
+.statistics-container {
+  display: flex;
+  margin-top: 60px;
+  gap: 60px;
+}
+
+.numeric {
+  font-size: 24px;
+  color: hsl(0, 0%, 100%);
+}
+
+.sub-text {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-family: "Inter";
+  text-transform: uppercase;
+  margin-top: 6px;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-weight: 400;
+}
+
+@media (max-width: 1125px) {
+  .main-container {
+    width: 350px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .img-container {
+    background-image: url("images/image-header-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    filter: brightness(75%);
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: hsla(277, 96%, 52%, 0.431);
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 0;
+    padding: 20px;
+    grid-row: 2 / 3;
+  }
+
+  .header {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+
+  .info-container {
+    width: 270px;
+  }
+
+  .statistics-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    gap: 30px;
+  }
+}
